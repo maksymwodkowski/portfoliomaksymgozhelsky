@@ -55,6 +55,8 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.1px;
+  padding-left:0px;
+  list-style-position: inside;
 }
 
 /* ---------- Full-width divider lines (like the original) ---------- */
@@ -63,6 +65,7 @@
   position: relative;
   margin-top: 56px;
   padding-top: 56px;
+  
 }
 .casemeta::before,
 .casesection::before {
@@ -101,6 +104,37 @@
   margin-bottom: 6px;
 }
 
+/* ----------One-column section ---------- */
+.new-one-column-section { 
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  align-items: start;
+  justify-content: start;
+  align-self: stretch;
+}
+.new-one-column-section .prompt-header {
+    margin-top: 40px;
+}
+    
+/* ---------- Two-column section ---------- */
+.new-two-column-section {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  align-items: start;
+  justify-content: start;
+  align-self: stretch;
+}
+
+/* Remove the global sibling margin inside the two-column layout */
+.new-two-column-section > .casesection__text + .casesection__text {
+  margin-top: 0;
+}
+
 /* ---------- Content sections ---------- */
 .casesection__title {
   font-family: var(--font-display);
@@ -115,6 +149,10 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.1px;
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0;
+  align-self: stretch;
 }
 .casesection__text + .casesection__text { margin-top: 16px; }
 .casesub {
@@ -125,7 +163,19 @@
   letter-spacing: -0.1px;
   margin: 40px 0 0;
 }
-
+.casesub__sub {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+ul.casesection__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
 /* ---------- Stat callout ---------- */
 .casestat {
   margin-top: 28px;
@@ -135,11 +185,14 @@
 }
 .casestat-row {
   margin-top: 8px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
-.casestat-row .casestat { margin-top: 20px; }
+.casestat-row .casestat {
+  margin-top: 20px;
+  display: flex; /* override the inline-flex from .casestat so it fills its grid cell */
+}
 .casestat__label { color: var(--muted-2); font-size: 15px; }
 .casestat__value {
   font-family: var(--font-display);
@@ -177,4 +230,13 @@
 @media (max-width: 640px) {
   .casehead__title { font-size: 26px; }
   .casesection__title { font-size: 23px; }
+}
+
+.caseproto-btn {
+  margin-top: 32px;
+  font-size: 16px;
+}
+.caseproto-btn svg {
+  width: 20px;
+  height: 20px;
 }
