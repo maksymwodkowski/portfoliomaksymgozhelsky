@@ -12,7 +12,7 @@
   --body: #f7f7f7;
   --muted: #8f8f8f;
   --muted-2: #c9c9c9;
-  --line: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.1);
   --border-btn: rgba(255, 255, 255, 0.55);
   --max: 944px; /* 880 content + 2×32 padding */
   --pad: 32px;
@@ -406,4 +406,19 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   .section-title { font-size: 30px; }
   .pdf { padding: 64px 0; }
   .contact { padding: 64px 0 72px; }
+}
+
+@media (max-width: 640px) {
+  .hero__meta {
+    margin-top: 20px;
+    padding-left: 18px;
+  }
+
+  .hero__meta li {
+    margin-bottom: 4px;
+  }
+
+  .hero__meta li:last-child {
+    margin-bottom: 0;
+  }
 }

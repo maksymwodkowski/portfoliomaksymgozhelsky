@@ -27,7 +27,10 @@
   <header class="nav">
     <div class="container nav__inner">
       <a href="#hero" class="logo" aria-label="Maksym Gorzelski — home">
-        <img class="logo__img" src="assets/logo.svg" alt="Maksym Gorzelski" width="234" height="17" />
+         <picture>
+           <source media="(max-width: 640px)" srcset="assets/logo-mobile.svg"> 
+           <img class="logo__img" src="assets/logo.svg" alt="Maksym Gorzelski" width="234" height="17" /> 
+         </picture>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#case" class="nav__link">Work</a>
@@ -38,38 +41,30 @@
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <h1 class="hero__title load-rise">
-        I Design Complex Digital Products<br />
-        With Clean UI And User&ndash;Centered UX
-      </h1>
-      <p class="hero__meta load-rise">7+ years in product design &middot; Building and scaling complex digital products &middot; Based in Krakow</p>
-    </div>
-    <a href="#about" class="hero__scroll" aria-label="Scroll to next section">
-      <svg width="20" height="56" viewBox="0 0 20 56" fill="none" aria-hidden="true">
-        <path d="M10 0V53M10 53L2 45M10 53L18 45" stroke="currentColor" stroke-width="1" />
-      </svg>
-    </a>
-  </section>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="about">
-    <div class="container about__inner">
-      <!-- Wireframe shapes (exact extracted SVG assets from the original) -->
-      <img class="shape shape--cube" src="assets/shape-cube.svg" alt="" aria-hidden="true" />
-      <img class="shape shape--circle" src="assets/shape-circle.svg" alt="" aria-hidden="true" />
-      <img class="shape shape--tetra" src="assets/shape-tetra.svg" alt="" aria-hidden="true" />
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="hero">
+  <div class="container">
+    <h1 class="hero__title load-rise">
+      I Design Complex Digital Products<br />
+      With Clean UI And User&ndash;Centered UX
+    </h1>
 
-      <div class="about__content reveal">
-        <h2 class="about__title">How I became Designer?</h2>
-        <p>While growing up as a kid I liked to Sketch 3D Elements.</p>
-        <p>Later I became student learning Design.</p>
-        <p>After finishing my degree I was inspired by UX/UI field.&nbsp; Feeling that I can impact...</p>
-      </div>
-    </div>
-  </section>
+    <ul class="hero__meta load-rise">
+      <li>7+ years in product design</li>
+      <li>Building and scaling complex digital products</li>
+      <li>Based in Krakow</li>
+    </ul>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to next section">
+    <svg width="20" height="56" viewBox="0 0 20 56" fill="none" aria-hidden="true">
+      <path d="M10 0V53M10 53L2 45M10 53L18 45"
+            stroke="currentColor" stroke-width="1" />
+    </svg>
+  </a>
+</section>
+
 
   <!-- ===================== WORK APPROACH ===================== -->
   <section id="approach" class="approach">
@@ -139,8 +134,7 @@
             <img src="assets/ai-case-thumbnail.jpg" alt="Shipping platform dashboard with shipment reports and analytics" loading="lazy" />
           </div>
           <span class="case__tag">AI native UX/UI Design</span>
-          <h3 class="case__title">Building an AI native UX/UI Design workflow 
-on a team level.</h3>
+          <h3 class="case__title">AI-Native UX/UI Design Workflow on a Team Level</h3>
         </a>
 
         <a class="case reveal-scale" href="instant-gavel.html">
