@@ -45,12 +45,15 @@
 .casefig--pair {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 0px;
+}
+.casefig-group .casefig + .casefig {
+  margin-top: 0;
 }
 
 /* ---------- Intro ---------- */
 .caseintro {
-  margin-top: 54px;
+  margin-top: 16px;
   color: var(--body);
   font-size: 16px;
   line-height: 1.5;
@@ -176,6 +179,19 @@ ul.casesection__text {
   margin-bottom: 0;
   padding-top: 0;
 }
+/* ---------- Inline source link ---------- */
+.casesection__text a.casesource-link,
+a.casesource-link {
+  color: #09f !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.casesection__text a.casesource-link:hover,
+a.casesource-link:hover {
+  color: #09f !important;
+  opacity: 0.85;
+}
+
 /* ---------- Stat callout ---------- */
 .casestat {
   margin-top: 28px;
@@ -184,19 +200,25 @@ ul.casesection__text {
   gap: 4px;
 }
 .casestat-row {
-  margin-top: 8px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
 .casestat-row .casestat {
-  margin-top: 20px;
+  margin-top: 0px;
   display: flex; /* override the inline-flex from .casestat so it fills its grid cell */
 }
-.casestat__label { color: var(--muted-2); font-size: 15px; }
+.casestat__label { 
+  font-family: var(--font-display);
+  color: var(--fg); 
+  font-size: 22px; 
+  font-weight: 700;
+}
 .casestat__value {
   font-family: var(--font-display);
-  font-size: 40px;
+  color: var(--fg); 
+  font-size: 56px;
   font-weight: 700;
   line-height: 1;
 }

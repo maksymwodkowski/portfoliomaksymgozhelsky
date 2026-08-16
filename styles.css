@@ -82,10 +82,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   font-size: 15px;
   color: var(--fg);
   transform-origin: center center;
-  transition: transform 0.3s var(--spring);
+  transition: transform 0.3s var(--spring), color 0.3s var(--ease);
   will-change: transform;
 }
-.nav__link:hover { transform: rotate(2deg); }
+.nav__link:hover { transform: rotate(2deg); color: var(--muted-2); }
 
 /* ---------- Buttons (hover = 2° tilt, like the original) ---------- */
 .btn {
@@ -105,11 +105,20 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   background: var(--fg);
   color: #050404;
   padding: 7px 22px;
+  transition: transform 0.3s var(--spring), background-color 0.3s var(--ease);
+}
+.btn--solid:hover {
+  background: #d8d7d7;
 }
 .btn--ghost {
   border: 1px solid var(--border-btn);
   color: var(--fg);
   padding: 9px 26px;
+  transition: transform 0.3s var(--spring), border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.btn--ghost:hover {
+  border-color: var(--muted);
+  color: var(--muted-2);
 }
 .btn svg { flex-shrink: 0; }
 
@@ -122,6 +131,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   font-weight: 500;
   color: var(--fg);
   transform-origin: center center;
+  transition: color 0.3s var(--ease);
   will-change: transform;
 }
 /* Hover tilt lives with the other reveal-aware hovers at the end of the file,
@@ -149,6 +159,25 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   font-weight: 700;
   line-height: 1.2;
 }
+.hero__title-word {
+  display: inline-block;
+  transform-origin: center bottom;
+  transition: transform 0.3s var(--spring);
+  will-change: transform;
+}
+.hero__title-word:hover {
+  transform: translateY(-4px) rotate(-2deg);
+}
+.hero__title-word:nth-of-type(2):hover { transform: translateY(-4px) rotate(3deg); }
+.hero__title-word:nth-of-type(3):hover { transform: translateY(-4px) rotate(-3deg); }
+.hero__title-word:nth-of-type(4):hover { transform: translateY(-4px) rotate(2deg); }
+.hero__title-word:nth-of-type(5):hover { transform: translateY(-4px) rotate(-4deg); }
+.hero__title-word:nth-of-type(6):hover { transform: translateY(-4px) rotate(4deg); }
+.hero__title-word:nth-of-type(7):hover { transform: translateY(-4px) rotate(-3deg); }
+.hero__title-word:nth-of-type(8):hover { transform: translateY(-4px) rotate(2deg); }
+.hero__title-word:nth-of-type(9):hover { transform: translateY(-4px) rotate(-2deg); }
+.hero__title-word:nth-of-type(10):hover { transform: translateY(-4px) rotate(3deg); }
+.hero__title-word:nth-of-type(11):hover { transform: translateY(-4px) rotate(-4deg); }
 .hero__meta {
   margin-top: 38px;
   color: var(--body);
@@ -159,7 +188,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   align-items: center;
 }
 .hero__meta li + li::before {
-  content: "•";
+  content: "|";
   margin: 0 10px;
   color: var(--muted);
 }
@@ -294,6 +323,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   line-height: 1.25;
   color: var(--fg);
   max-width: 24ch;
+  transition: color 0.3s var(--ease);
 }
 
 /* ---------- PDF ---------- */
@@ -332,10 +362,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   display: inline-block;
   width: 214px;
   transform-origin: center center;
-  transition: transform 0.3s var(--spring);
+  transition: transform 0.3s var(--spring), filter 0.3s var(--ease);
   will-change: transform;
 }
-.contact__qrwrap:hover { transform: rotate(2deg); }
+
+.contact__qrwrap:hover {
+  transform: rotate(2deg);
+  filter: brightness(0.82);
+}
+
 .contact__qr {
   width: 214px;
   height: 214px;
@@ -377,11 +412,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
    entrance spring. Rotates around its own center. */
 .case.is-visible { transition: transform 0.32s var(--spring); }
 .case.is-visible:hover { transform: rotate(1.3deg); }
+.case.is-visible:hover .case__title { color: var(--muted-2); }
 
 /* PDF text link tilts 2° on hover (measured). Scoped to .is-visible so it
    out-specifies .reveal.is-visible, which would otherwise pin it to none. */
-.textlink.is-visible { transition: transform 0.3s var(--spring); }
-.textlink.is-visible:hover { transform: rotate(2deg); }
+.textlink.is-visible { transition: transform 0.3s var(--spring), color 0.3s var(--ease); }
+.textlink.is-visible:hover { transform: rotate(2deg); color: var(--muted-2); }
 
 /* Failsafes */
 .no-js .reveal, .no-js .reveal-scale, .no-js .load-rise { opacity: 1; transform: none; }
@@ -389,7 +425,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   .reveal, .reveal-scale, .load-rise { opacity: 1; transform: none; transition: none; }
   .hero__scroll { animation: none; }
   .btn:hover, .nav__link:hover, .textlink.is-visible:hover,
-  .case.is-visible:hover, .step__icon:hover, .contact__qrwrap:hover { transform: none; }
+  .case.is-visible:hover, .step__icon:hover, .contact__qrwrap:hover,
+  .hero__title-word:hover { transform: none; }
 }
 
 /* ============================================================
