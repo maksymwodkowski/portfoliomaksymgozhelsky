@@ -248,6 +248,15 @@ a.casesource-link:hover {
   .casemeta { grid-template-columns: 1fr; gap: 30px; }
   .casehero { margin-top: 16px; }
   .casesection { margin-top: 56px; }
+  .new-two-column-section { grid-template-columns: 1fr; gap: 32px; }
+  .casestat-row { grid-template-columns: 1fr; gap: 32px; }
+  .casestat__label { font-size: 19px; }
+  .casestat__value { font-size: 44px; }
+}
+@media (max-width: 640px) {
+  .casestat-row { gap: 32px; }
+  .casestat__label { font-size: 17px; }
+  .casestat__value { font-size: 38px; }
 }
 @media (max-width: 640px) {
   .casehead__title { font-size: 26px; }
