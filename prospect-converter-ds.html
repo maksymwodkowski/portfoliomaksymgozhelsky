@@ -36,32 +36,18 @@
     </div>
 
     <section class="container">
-      <p class="caseintro reveal">Led the design system developed for Prospect Converter to ensure consistency, scalability, and efficiency across the product ecosystem.</p>
-
-      <div class="casemeta__group reveal" style="margin-top:40px;">
-        <h2 class="casemeta__label">Design System Modules</h2>
-        <ul class="casemeta__list">
-          <li>Foundations</li>
-          <li>Components</li>
-          <li>Patterns</li>
-          <li>Form Guideline</li>
-        </ul>
-      </div>
+      <p class="caseintro reveal">Led the design system developed for Prospect Converter to ensure consistency, scalability, and efficiency across the
+product ecosystem. It consisted of four modules: Foundations, Components, Patterns, Form Guideline.</p>
 
       <div class="casemeta reveal">
         <div class="casemeta__col">
           <div class="casemeta__group">
             <h2 class="casemeta__label">Responsibilities</h2>
             <ul class="casemeta__list">
-              <li>Owned the design system management process</li>
-              <li>Built complete product documentation</li>
+              <li>Owned product design system</li>
               <li>Designed new UI components</li>
-              <li>Added elements to the system</li>
-              <li>Maintained workflow documentation in Confluence</li>
-              <li>Added specific &ldquo;Guideline&rdquo;</li>
-              <li>Adapted experience according to product&rsquo;s legacy</li>
-              <li>Ensured design consistency with dev library</li>
-              <li>Considered consistency across B2B and B2C</li>
+              <li>Maintained product documentation in Confluence</li>
+              <li>Ensured design consistency with dev environment</li>
             </ul>
           </div>
         </div>
@@ -104,23 +90,43 @@
     <section class="casesection container reveal">
       <h2 class="casesection__title">Foundations</h2>
       <p class="casesection__text">The Foundations module defines the core visual and structural principles of the design system, ensuring consistency and scalability across all product modules.</p>
+      <p class="casesection__text">It consists of: Colors, Icons, Typography, Grid & Layouts, Content Standards.</p>
       <figure class="casefig"><img src="assets/cases/pcds-foundations.jpg" alt="Foundations module" loading="lazy" /></figure>
-      <h3 class="casesub">Foundations content</h3>
-      <ul class="casemeta__list" style="margin-top:12px;">
-        <li>Colors</li>
-        <li>Icons</li>
-        <li>Typography</li>
-        <li>Grid &amp; Layouts</li>
-        <li>Spacing Recommendations</li>
-        <li>Letter Case Standard</li>
-        <li>System Date Values</li>
-      </ul>
     </section>
+
+    <section class="casesection new-one-column-section container reveal">
+      <h2 class="casesection__title">Challenge 1: Component status tracking</h2>
+
+      <h3 class="casesub">The problem</h3>
+      <p class="casesection__text">As the team grew to up to 5 designers working across the same design system, there was no way to tell whether a component was safe to reuse or had changed since the last time someone touched it. So designers kept pinging each other to confirm before using anything in a new screen.</p>
+
+      <h3 class="casesub">The fix</h3>
+      <p class="casesection__text">In a team retrospective, we introduced a status label on every component: ready, in review, or deprecated, visible directly in the library.</p>
+
+      <h3 class="casesub">The result</h3>
+      <p class="casesection__text">Designers could check a component's status at a glance instead of asking the team. This cut down the back-and-forth that used to happen before starting new screens.</p>
+      <figure class="casefig"><img src="assets/cases/pcds-components-status.jpg" alt="Auction submission dashboard" loading="lazy" /></figure>
+    </section>
+
 
     <section class="casesection container reveal">
       <h2 class="casesection__title">Components</h2>
       <p class="casesection__text">Components are reusable interface elements with variations and states. Unique components include extra rules. Basic structure was, component - variants - states - additional rules + links.</p>
       <figure class="casefig"><img src="assets/cases/pcds-components.jpg" alt="Components module" loading="lazy" /></figure>
+    </section>
+
+    <section class="casesection new-one-column-section container reveal">
+      <h2 class="casesection__title">Challenge 2: Form guideline for the dev team</h2>
+
+      <h3 class="casesub">The problem</h3>
+      <p class="casesection__text">The product had many forms across B2B and B2C sharing a lot of common rules, but no documented reference for how they should be structured. Developers had no consistent way to know which components to use or how to place them, and every new form risked drifting from existing patterns.</p>
+
+      <h3 class="casesub">The fix</h3>
+      <p class="casesection__text">In a weekly sync with the Dev team, we agreed to build a Form Guideline covering all necessary variations: single controls, control or text groups, and subgroups.</p>
+
+      <h3 class="casesub">The result</h3>
+      <p class="casesection__text">Developers could assemble new forms directly from the documented rules, without needing a designer to spec every screen individually.</p>
+      <figure class="casefig"><img src="assets/cases/pcds-formguide.jpg" alt="Auction submission dashboard" loading="lazy" /></figure>
     </section>
 
     <section class="casesection container reveal">
@@ -130,22 +136,19 @@
       <figure class="casefig"><img src="assets/cases/pcds-patterns.jpg" alt="Patterns module" loading="lazy" /></figure>
     </section>
 
-    <section class="casesection container reveal">
-      <h2 class="casesection__title">Form Guideline For Devs Team</h2>
-      <p class="casesection__text">The goal was to help developers build forms without designing full screens, avoiding extra work and communication. Guideline explains which components can be used, how to choose the right ones, and rules for their placement relative to each other. All necessary variations were covered, including single controls, control or text groups, and subgroups.</p>
-      <figure class="casefig"><img src="assets/cases/pcds-formguide.jpg" alt="Form guideline for developers" loading="lazy" /></figure>
-    </section>
+    <section class="casesection new-one-column-section container reveal">
+      <h2 class="casesection__title">Challenge 3: Dates and titles formatting</h2>
 
-    <section class="casesection container reveal">
-      <h2 class="casesection__title">Key challenges</h2>
-      <h3 class="casesub">Components status Tracking</h3>
-      <p class="casesection__text">While working within a team of up to 5 designers, we had a struggle to understand if we could reuse a particular component or not. So, on one of team retrospective workshop sessions, we decided marking statuses for each component. Which saved us time spent on communications.</p>
-      <h3 class="casesub">Form Guideline</h3>
-      <p class="casesection__text">We designed many forms, that has a lot of common rules. On one of our weekly syncs with the Dev team, together we came up with the idea to prepare such a &ldquo;Guideline&rdquo;.</p>
-      <h3 class="casesub">Dates and titles formatting</h3>
-      <p class="casesection__text">At some point I spotted that there are inconsistencies in terms of dates formatting. So I requested a team sync to set up a rules group, and document them after discussion. Important to mention &ndash; that such rules are &ldquo;nice to have&rdquo; as a link, on the pages of related components.</p>
+      <h3 class="casesub">The problem</h3>
+      <p class="casesection__text">There was no defined standard for date and title formatting. I spotted inconsistencies across different screens, each apparently decided independently by whoever built that screen.</p>
+
+      <h3 class="casesub">The fix</h3>
+      <p class="casesection__text">I requested a team sync to define a formatting rules group, documented after discussion and linked to the relevant component pages as a reference.</p>
+
+      <h3 class="casesub">The result</h3>
+      <p class="casesection__text">New screens followed one consistent format by default, instead of each designer choosing their own.</p>
+      <figure class="casefig"><img src="assets/cases/pcds-dates.jpg" alt="Auction submission dashboard" loading="lazy" /></figure>
     </section>
-  </main>
 
   <section id="contact" class="contact">
     <div class="container">
