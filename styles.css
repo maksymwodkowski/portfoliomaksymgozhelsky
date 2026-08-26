@@ -85,7 +85,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   transition: transform 0.3s var(--spring), color 0.3s var(--ease);
   will-change: transform;
 }
-.nav__link:hover { transform: rotate(2deg); color: var(--muted-2); }
+.nav__link:hover { 
+    /* Combine both movements here */
+    transform: translateY(-3px) rotate(5deg); 
+    color: var(--muted-2); 
+}
 
 /* ---------- Buttons (hover = 2° tilt, like the original) ---------- */
 .btn {
@@ -99,7 +103,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   transition: transform 0.3s var(--spring);
   will-change: transform;
 }
-.btn:hover { transform: rotate(2deg); }
+.btn:hover { transform: translateY(-2px) rotate(3deg); }
 .btn { border-radius: 0; }
 .btn--solid {
   background: var(--fg);
@@ -117,6 +121,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   transition: transform 0.3s var(--spring), border-color 0.3s var(--ease), color 0.3s var(--ease);
 }
 .btn--ghost:hover {
+  transform: translateY(-3px) rotate(2deg);
   border-color: var(--muted);
   color: var(--muted-2);
 }
@@ -250,13 +255,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   color: rgba(255, 255, 255, 0.32);
 }
 .shape--circle:hover {
-  transform: translate(-4px, -6px) rotate(-4deg) scale(1.12);
+  transform: translate(0px,-16px);
 }
 .shape--cube:hover {
-  transform: translate(5px, -4px) rotate(6deg) scale(1.06);
+  transform: translate(0px,-16px);
 }
 .shape--tetra:hover {
-  transform: translate(-3px, -8px) rotate(3deg) scale(1.2);
+  transform: translate(0px,-16px);
 }
 .shape--circle { top: 20%; right: 6.5%; width: 80px; }
 .shape--cube   { top: 40%; left: 3.5%; width: 88px; }
@@ -378,7 +383,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 }
 
 .contact__qrwrap:hover {
-  transform: rotate(2deg);
+  transform: translateY(-5px) rotate(3deg);
   filter: brightness(0.82);
 }
 
@@ -422,13 +427,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
    out-orders .reveal-scale.is-visible, so hover doesn't inherit the slower
    entrance spring. Rotates around its own center. */
 .case.is-visible { transition: transform 0.32s var(--spring); }
-.case.is-visible:hover { transform: rotate(1.3deg); }
+.case.is-visible:hover { transform: translateY(-3px) rotate(2deg); }
 .case.is-visible:hover .case__title { color: var(--muted-2); }
 
 /* PDF text link tilts 2° on hover (measured). Scoped to .is-visible so it
    out-specifies .reveal.is-visible, which would otherwise pin it to none. */
 .textlink.is-visible { transition: transform 0.3s var(--spring), color 0.3s var(--ease); }
-.textlink.is-visible:hover { transform: rotate(2deg); color: var(--muted-2); }
+.textlink.is-visible:hover { transform: translateY(-4px) rotate(3deg); color: var(--muted-2); }
 
 /* Failsafes */
 .no-js .reveal, .no-js .reveal-scale, .no-js .load-rise { opacity: 1; transform: none; }
