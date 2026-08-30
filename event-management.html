@@ -93,12 +93,21 @@
       <figure class="casefig"><img src="assets/cases/event-requests.png" alt="Event requests list" loading="lazy" /></figure>
     </section>
 
-    <section class="casesection container reveal">
-      <h2 class="casesection__title">Event</h2>
-      <p class="casesection__text">Allows user to fill in a full info, plus add agenda and see a summary in real time.</p>
+    <section class="casesection new-one-column-section container reveal">
+      <h2 class="casesection__title">Key challenge: Event page design</h2>
+
+      <h3 class="casesub">The initial request</h3>
+      <p class="casesection__text">Event coordinators needed to manage a request that could contain multiple related events (a client asking for 3 separate roundtables, for example), each moving through its own pipeline stage – Intake Call, Request for Proposal, Sourcing Options, Contract – while also filling in two distinct sets of information for each: logistics details and a day-by-day agenda.</p>
+
+      <h3 class="casesub">What we found</h3>
+      <p class="casesection__text">Splitting this across separate screens meant coordinators lost context constantly – switching between the client's original request, the event's current stage, and the operational details they were filling in. With multiple sub-events per request, keeping track of which event was in which stage, on which screen, became its own source of errors.</p>
+
+      <h3 class="casesub">The fix</h3>
+      <p class="casesection__text">We combined everything into a single view: a event-switcher at the top for handling multiple sub-events under one request, a stage tracker beneath it, and a two-column layout for event details and agenda side by side – so both could be filled without switching context. A collapsible reference panel on the right kept the original request, notes, and history log visible on demand, without forcing a separate screen just to check what the client had asked for.</p>
+
+            <h3 class="casesub">The result</h3>
+      <p class="casesection__text">Coordinators could manage a multi-event request end to end from one screen – tracking pipeline stage, filling logistics and agenda, and referencing the original ask, all without navigating away.</p>
       <figure class="casefig"><img src="assets/cases/event-event.png" alt="Event detail view" loading="lazy" /></figure>
-      <h3 class="casesub">Key Challenge</h3>
-      <p class="casesection__text">The task was to keep all the details on one page, in addition include agenda set up and navigation between sub events. Here the &ldquo;Vibe Coding&rdquo; method saved us a lot of time on the validation. So we were able to have testing sessions with actual users of this product. And based on the feedback we adjusted a best fit option.</p>
     </section>
 
     <section class="casesection container reveal">
