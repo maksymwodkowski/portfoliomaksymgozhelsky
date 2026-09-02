@@ -251,18 +251,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   transition: transform 0.3s var(--spring), color 0.3s var(--ease);
   will-change: transform;
 }
-.shape:hover {
-  color: rgba(255, 255, 255, 0.32);
-}
-.shape--circle:hover {
-  transform: translate(0px,-16px);
-}
-.shape--cube:hover {
-  transform: translate(0px,-16px);
-}
-.shape--tetra:hover {
-  transform: translate(0px,-16px);
-}
 .shape--circle { top: 20%; right: 6.5%; width: 80px; }
 .shape--cube   { top: 40%; left: 3.5%; width: 88px; }
 .shape--tetra  { top: 72%; left: 72%;   width: 118px; }
@@ -461,9 +449,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
     left: 50%;
     bottom: 6%;
     transform: translateX(-50%);
-  }
-  .shape--tetra:hover {
-    transform: translateX(-50%) translateY(-6px) rotate(3deg) scale(1.15);
   }
   .section-title { margin-bottom: 56px; }
 }
