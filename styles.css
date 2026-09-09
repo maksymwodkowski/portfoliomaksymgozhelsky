@@ -415,7 +415,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
    out-orders .reveal-scale.is-visible, so hover doesn't inherit the slower
    entrance spring. Rotates around its own center. */
 .case.is-visible { transition: transform 0.32s var(--spring); }
-.case.is-visible:hover { transform: translateY(-3px) rotate(2deg); }
+.case.is-visible:hover { transform: translateY(-8px) rotate(2deg); }
 .case.is-visible:hover .case__title { color: var(--muted-2); }
 
 /* PDF text link tilts 2° on hover (measured). Scoped to .is-visible so it
